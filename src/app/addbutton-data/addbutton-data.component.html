@@ -1,0 +1,76 @@
+<div mat-dialog-title>
+    <h1>Registration Form</h1>
+</div>
+<form [formGroup]="registrationform" (ngSubmit)="submitform()">
+    <div mat-dialog-content class="contentmargin">
+        <div class="fieldsdata">
+            <mat-form-field appearance="outline">
+                <mat-label><em>First Name</em></mat-label>
+                <input matInput formControlName="firstname">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label><em>Last Name</em></mat-label>
+                <input matInput formControlName="lastname">
+            </mat-form-field>
+        </div>
+
+        <div class="fieldsdata">
+            <mat-form-field appearance="outline">
+                <mat-label><em>Email</em></mat-label>
+                <input matInput type="email" placeholder="eg.123@123mail.com" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label><em>Number</em></mat-label>
+                <input matInput formControlName="number" type="number">
+            </mat-form-field>
+        </div>
+
+        <div class="fieldsdata">
+            <mat-form-field appearance="outline">
+                <mat-label><em>DOB</em></mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dob" [max]="maxdate" placeholder="DD/MM/YYYY">
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label><em>Courses</em></mat-label>
+                <mat-select formControlName="courses">
+                    <mat-option *ngFor="let val of courses" [value]="val">{{val}} </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </div>
+
+        <div class="fieldsdata">
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+                <mat-label><b>Gender</b></mat-label>
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+                <mat-radio-button value="others">Others</mat-radio-button>
+            </mat-radio-group>
+
+        </div>
+
+        <div class="fieldsdata">
+            <img [src]="url" class="imgupload">
+            <input type="file" accept="image/*" (change)="onSelect($event)" formControlName="img">
+        </div>
+
+        <div class="fieldsdata">
+            <mat-form-field appearance="outline">
+                <mat-label><em>Remarks</em></mat-label>
+                <textarea matInput formControlName="remarks"></textarea>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div mat-dialog-actions class="buttonclass">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'Save'}}</button>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+.contentmargin{
+    padding-top: 10px;
+}
+
+.fieldsdata{
+    display: flex;
+    gap: 10px;
+    mat-form-field {
+        width: 100%;
+    }
+}
+.buttonclass{
+    padding: 0% 25px 20px;
+    button{
+        flex: 1;
+    }
+}
+.imgupload{
+    height: 100px;
+    width: 100px;
+}
