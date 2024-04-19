@@ -7,4 +7,3 @@ RUN npm run build --prod
 FROM nginx:stable
 COPY --from=build /app/dist/project1/browser /usr/share/nginx/html
 EXPOSE 80
-CMD ["nginx", "-g", "demon off;"]
