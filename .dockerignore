@@ -1,0 +1,11 @@
+**/.env
+**/.git
+**/.gitignore
+**/.vs
+**/.vscode
+**/node_modules
+**/npm-debug.log
+**/obj
+**/dist
+LICENSE
+README.md

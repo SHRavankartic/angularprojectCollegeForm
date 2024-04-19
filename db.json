@@ -1,17 +1,6 @@
 {
   "registrationformdata": [
     {
-      "firstname": "cx",
-      "lastname": "cx",
-      "email": "cx@mail.com",
-      "number": "7575757575",
-      "dob": "1993-06-14T18:30:00.000Z",
-      "courses": "Computer Science",
-      "gender": "male",
-      "remarks": "",
-      "id": 3
-    },
-    {
       "firstname": "gf",
       "lastname": "gf",
       "email": "gf@mail.com",
@@ -39,34 +28,11 @@
       "email": "erwer@sdfs",
       "number": 9999888889,
       "dob": "1998-06-01T18:30:00.000Z",
-      "courses": "Chemical",
+      "courses": "Mechanical",
       "gender": "male",
+      "img": "",
       "remarks": "",
       "id": 6
-    },
-    {
-      "firstname": "yh",
-      "lastname": "hy",
-      "email": "yhyh@hyhy",
-      "number": 9899393939,
-      "dob": "1990-12-03T18:30:00.000Z",
-      "courses": "Mechanical",
-      "gender": "male",
-      "img": "C:\\fakepath\\michal-zych-qV8VSz-zgkE-unsplash.jpg",
-      "remarks": "",
-      "id": 7
-    },
-    {
-      "firstname": "shravan",
-      "lastname": "karthic",
-      "email": "shk@mail.com",
-      "number": 8987273234,
-      "dob": "2007-06-04T18:30:00.000Z",
-      "courses": "Mechanical",
-      "gender": "male",
-      "img": "C:\\fakepath\\4779505.jpg",
-      "remarks": "hello",
-      "id": 8
     }
   ]
 }
