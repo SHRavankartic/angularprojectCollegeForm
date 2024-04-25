@@ -1,11 +1,11 @@
 pipeline{
     agent any
     stages{
-        stage('clone repository'){
-            steps{
-                git 'https://github.com/SHRavankartic/angularprojectCollegeForm'
-            }
-        }
+        // stage('clone repository'){
+        //     steps{
+        //         git 'https://github.com/SHRavankartic/angularprojectCollegeForm'
+        //     }
+        // }
         stage('build docker image'){
             steps{
                 scripts{
