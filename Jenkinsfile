@@ -1,22 +1,17 @@
 pipeline{
     agent any
     stages{
-        // stage('clone repository'){
-        //     steps{
-        //         git 'https://github.com/SHRavankartic/angularprojectCollegeForm'
-        //     }
-        // }
         stage('build docker image'){
             steps{
                 scripts{
-                    sh 'C:/Program Files/Docker/Docker/resources/bin build -t angularapp-image .'
+                    sh 'C:/Users/7kart/AppData/Local/Docker build -t angularapp-image .'
                 }
             }
         }
         stage('run docker'){
             steps{
                 scripts{
-                    sh 'C:/Program Files/Docker/Docker/resources/bin run -p 8090:80 angularapp-image'
+                    sh 'C:/Users/7kart/AppData/Local/Docker run -p 8090:80 angularapp-image'
                 }
             }
         }
