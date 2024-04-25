@@ -1,12 +1,12 @@
 pipeline{
     agent any
     tools{
-        dockerTool  ''
+        dockerTool  'angularappDocker'
     }
     stages{
         stage('clone repository'){
             steps{
-                git ''
+                git 'https://github.com/SHRavankartic/angularprojectCollegeForm'
             }
         }
         stage('build docker image'){
@@ -19,7 +19,7 @@ pipeline{
         stage('run docker'){
             steps{
                 scripts{
-                    sh '/usr/local/bin/docker run -p 8090:80 angularapp-image .'
+                    sh '/usr/local/bin/docker run -p 8090:80 angularapp-image'
                 }
             }
         }
